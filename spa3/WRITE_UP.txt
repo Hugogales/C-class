@@ -1,0 +1,18 @@
+Hugo Garrido-lestache - SPA 3 WRITE UP 
+
+WHAT DID YOU LEARN FROM DOING THIS LAB?
+
+I learnt and primarily got practice using classes and creating .h files.
+I enjoyed and learn a lot about header files and how they work with the .cpp files.
+I got practice using #ifndef and #endif and why it is needed/usefull.
+It  was also usefull using pointers.
+
+WHAT DID I FIND CHALLENGING ABOUT THE LAB?
+
+I found it to be generally straing foward and did not have many problems other than a small bug.
+the biggest hurdle was creating header file and using #ifndef and #endif, however that did not take too long.
+
+WHAT WOULD YOU RECOMMEND CHANGING IF THIS LAB IS REUSED IN FUTURE YEARS?
+
+I would recommend doing more trivial work with pointer to get more work and experience using them. 
+However the focus of this lab is on classes and it was quite usefull
