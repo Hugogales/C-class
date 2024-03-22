@@ -4,7 +4,7 @@
 
 using namespace std;
 const int MAX_DICTIONARY_SIZE = 3000;
-const int MAX_GUESSES = 6;
+const int MAX_GUESSES = 3000;
 
 /**
  * checks if letter is in word
@@ -31,6 +31,9 @@ bool can_match(string possible_guess, string guess, string letter_matches){
     for(int i =0 ; i < 5; i++){
         if(letter_matches.at(i) == '.'){
             if (guess.at(i) != possible_guess.at(i)) return false;
+        }
+        if(letter_matches.at(i) == '?'){
+            if (guess.at(i) == possible_guess.at(i)) return false;
         }
         if(letter_matches.at(i) == '\?'){
             if (!is_letter_in_word(possible_guess, guess.at(i))) return false;
@@ -110,16 +113,19 @@ int fill_dictionary(string dictionary[MAX_DICTIONARY_SIZE]){
  * @return size of both arrays
  */
 int fill_guesses_array(string guess[], string refrence[]){
-    int index = 0;
-    cin >> guess[index];
-    cin >> refrence[index];
-
-    while (!cin.eof() and index < 6) {
-        index++;
+    if(!cin.eof()) {
+        int index = 0;
         cin >> guess[index];
         cin >> refrence[index];
+
+        while (!cin.eof() and index < MAX_GUESSES) {
+            index++;
+            cin >> guess[index];
+            cin >> refrence[index];
+        }
+        return index;
     }
-    return index + 1;
+    return 0;//error
 }
 
 /**
